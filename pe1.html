@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+        <meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+        <meta name="”robots”" content="”NOODP,NOYDIR”">
+        <meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+        <base href="https://vtop.vitbhopal.ac.in/vtop/">
+           <meta http-equiv="cache-control" content="max-age=0">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta charset="utf-8">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+    
+        <title>Bhopal (VIT)</title>
+        
+        
+    
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>VIT University - VTOP</title>
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+            <link rel="icon" type="image/png" href="assets/img/favicon.png">
+            <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+             <link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+            <link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+            <link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+            <link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+            <link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+            <link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+            <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+            
+        
+        
+    </head>
+    <body class="VTopBody" style="padding-top: 51.9px;">
+
+		
+		<div id="page_outline">
+
+		   	
+		   	
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+  				<div class="container">
+						
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+  				</div>
+			</nav>
+	
+	    	
+	    	<input type="hidden" value="" id="winImage">
+	    	<div id="page-wrapper" style="padding-top:50px;">
+	    	
+	    	<script>
+					 /*<![CDATA[*/
+				var x = "local";
+				
+				/*]]>*/
+				</script>
+	    	
+	    	
+	    	
+				<section id="loginbox" class="col-md-4 col-md-offset-4">
+	
+					<div class="box box-info">
+	
+						<div class="box-header with-border">
+							<h3 class="box-title">V-TOP Login</h3>
+						</div>
+	
+						<div class="box-body">
+						
+								<form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+							
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-success"></p>
+	
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+	
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								
+								<!-- <div th:switch="${user.role}"> 
+								  <p th:case="'admin'">User is an administrator</p>
+								  <p th:case="#{roles.manager}">User is a manager</p>
+								  <p th:case="*">User is some other thing</p> 
+								</div> -->
+	
+								<!-- <th:text>local</th:text> -->
+								
+								<div>
+	
+								 <div align="center" id="captchaRefresh">
+								
+									<div class="col-md-offset-1"> 
+										<img alt="vtopCaptcha" src="data:image/png;base64, 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">
+										 <button type="button" onclick="doRefreshCaptcha();" style="width:35px; border:none; background-color:white; background-repeat:no-repeat;">		
+											<img src="assets/img/refresh_img.png" width="20px">
+										 </button>									 
+										<input type="text" id="captchaCheck" style="margin-top: 5px; width: 70%" name="captchaCheck" placeholder="Captcha (CAPS &amp; NUMBERS ONLY)" maxlength="6" required="required" onkeyup="this.value = this.value.toUpperCase()">															
+									</div>
+								
+								</div>  
+								</div>
+								
+								
+								<div class="box-footer">
+									<div class="col-xs-6">
+										<!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+										<a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+										<a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+	                       							<a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+									</div>
+								
+								
+									<div class="row col-xs-6">
+										<button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+									</div>	
+									<!-- <div th:if="${ipstatus=='local'}"> -->
+								<!-- 	<div class="row col-xs-12">
+										 <button type="submit"  class="btn btn-primary pull-right">Sign
+											in</button> 
+								 
+									</div> -->													
+								</div>
+							</form> 
+						</div>
+					</div>
+					</section>
+				</div>
+			
+
+				
+
+
+		
+		<div class="modal fade" id="myModalFooter" role="dialog">
+		  <div class="modal-dialog">		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">×</button>
+		        <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p style="color:green;">This page is under Construction !!! Please try later</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>
+
+		<script src="assets/jquery/jquery-3.3.1.js"></script>
+		<script src="assets/plugins/moment.js"></script>
+		<script src="assets/plugins/jquery.hotkeys.js"></script>
+		<script src="assets/plugins/jquery.slimscroll.js"></script>
+		<script src="assets/plugins/jquery.blockUI.js"></script>		
+		<script src="assets/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/plugins/bootstrapValidator.js"></script>
+		<script src="assets/plugins/vtop-validation.js"></script>
+		<script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+ 		<script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+		
+ 		<script type="text/javascript">
+		
+			window.onload = function() {
+				document.onkeydown = function(e) {
+					return (e.which || e.keyCode) != 116;
+				};
+			    $("body").css("padding-top", $(".navbar-fixed-top").height());
+			}
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+
+		
+			$(window).bind("onunload", function() { 
+				$.blockUI();
+				ajaxCall("/cloneLogout",null,null);
+				$.unblockUI();
+			})
+
+		
+			$(document).bind('keydown', 'alt+right', function(e) {
+				e.preventDefault();
+			});
+
+			$(document).bind('keydown', 'alt+left', function(e) {
+				e.preventDefault();
+			});
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+ 			
+			$(window).on("unload",function() {
+				$.ajax({
+					type : "POST",
+					url : "/cloneLogout",
+					success : function(response){
+					},
+					error : function(jqXHR, textStatus, errorMessage) {
+					}		
+				})
+			}); 
+
+			function doRefreshCaptcha() 
+			{
+	
+				$.ajax({
+					url : "doRefreshCaptcha",									
+					type : "POST",
+					cache : false,
+					processData : false,
+					contentType : false,
+					success : function(response)				
+					{	
+						$("#captchaRefresh").html(response);
+						
+					
+					}
+			 	});
+			}
+			
+		</script>
+			
+			
+		<script>
+		/*<![CDATA[*/
+			
+
+			
+			function resizeDiv() {
+				
+/*  				var winHeight=$( window ).height()-95;
+				$("body").css("height",winHeight+"px");
+				$("#page-content").css("height",winHeight+"px");
+				$("#sidebar-wrapper").css("height",winHeight+"px");*/
+			
+ 		}
+ 
+		   /* $("html").on("contextmenu",function(e){
+		        return false;
+		     });
+
+		     window.oncontextmenu = function () {
+		     return false;
+		     }
+		     $(document).keydown(function (event) {
+		     if (event.keyCode == 123) {
+		     return false;
+		     }
+		     else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+		     return false;
+		     }
+		     }); */
+		 
+			function resetPassword() {
+			  ajaxCall('resetPassword',null,'page_outline');
+			}
+			 
+			function forgotUserID() {
+			  ajaxCall('forgotUserID',null,'page_outline');
+			}			
+
+			function validateOTP() {
+				var data="otp="+$("#otp").val();
+				ajaxCall('validateParentLoginOtp',data,'page_outline');
+			}
+			
+			function openPage()	{
+				ajaxCall("vtopLogin",null,"page_outline");
+			}
+			
+			function openParentPage()	{
+				ajaxCall("vtopParentLogin",null,"page_outline");
+			}
+			
+			function openAlumniPage()	{
+				ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+			}
+			
+
+			
+			
+			/*]]>*/
+		</script>			
+			
+	
+
+
+<meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+	<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+	<meta name="”robots”" content="”NOODP,NOYDIR”">
+	<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+    <base href="https://vtop.vitbhopal.ac.in/vtop/">
+   	<meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+
+    <title>Bhopal (VIT)</title>
+    
+    
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VIT University - VTOP</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+ 		<link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+		<link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+		<link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+		
+	
+    
+
+
+
+		
+		<div id="page_outline">
+
+		   	
+		   	
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+  				<div class="container">
+						
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+  				</div>
+			</nav>
+	
+	    	
+	    	<input type="hidden" value="" id="winImage">
+	    	<div id="page-wrapper" style="padding-top:50px;">
+	    	
+	    	<script>
+					 /*<![CDATA[*/
+				var x = "local";
+				
+				/*]]>*/
+				</script>
+	    	
+	    	
+	    	
+				<section id="loginbox" class="col-md-4 col-md-offset-4">
+	
+					<div class="box box-info">
+	
+						<div class="box-header with-border">
+							<h3 class="box-title">V-TOP Login</h3>
+						</div>
+	
+						<div class="box-body">
+						
+								<form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+							
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-success"></p>
+	
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+	
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								
+								<!-- <div th:switch="${user.role}"> 
+								  <p th:case="'admin'">User is an administrator</p>
+								  <p th:case="#{roles.manager}">User is a manager</p>
+								  <p th:case="*">User is some other thing</p> 
+								</div> -->
+	
+								<!-- <th:text>local</th:text> --->
+								
+								
+								<div class="box-footer">
+									<div class="col-xs-6">
+										<!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+										<a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+										<a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+	                       							<a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+									</div>
+								
+								
+									<div class="row col-xs-6">
+										<button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+									</div>	
+									<!-- <div th:if="${ipstatus=='local'}"> -->
+								<!-- 	<div class="row col-xs-12">
+										 <button type="submit"  class="btn btn-primary pull-right">Sign
+											in</button> 
+								 
+									</div> -->													
+								</div>
+							</form> 
+						</div>
+					</div>
+					</section>
+				</div>
+			
+
+ 
+ <script>
+			  function onSubmit(token) {
+			//  alert("ipstatus : "+ x);
+			  var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&g-recaptcha-response="+$("#g-recaptcha-response").val();
+			//	alert(data);
+				ajaxCall('doLogin',data,'page_outline');
+			  //doc.submit();
+		  }
+
+		  function validate(event) {
+			  //alert("2");
+			  event.preventDefault();
+		    //var usernameRegex = new RegExp("[a-zA-Z0-9]{4,10}");
+		   /*  var usernameRegex=/^([a-zA-Z0-9]){4,20}$/;
+		    var password = /^(.){8,}$/;
+		    var username = document.getElementById('uname').value;
+		    var passwd = document.getElementById('passwd').value;
+		    if (!usernameRegex.test(username)) {
+		      swal("Enter valid username!");
+		    }else if (!password.test(passwd)) {
+		      swal("Enter valid pasword!");
+		    }else { */
+		       if(x == 'local'){
+		    		var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&captchaCheck="+$("#captchaCheck").val();
+					//alert(data);
+					ajaxCall('doLogin',data,'page_outline');
+		      }else{ 
+		    	  grecaptcha.execute();
+		      }
+		    	
+		    //}
+		  }
+
+		  function onload() {
+			  //alert("3");
+		    var element = document.getElementById('captcha');
+		    element.onclick = validate;
+		  }
+		onload();
+	</script>
+</div>
+			
+
+		
+		<div class="modal fade" id="myModalFooter" role="dialog">
+		  <div class="modal-dialog">		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">×</button>
+		        <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p style="color:green;">This page is under Construction !!! Please try later</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>
+
+		<script src="assets/jquery/jquery-3.3.1.js"></script>
+		<script src="assets/plugins/moment.js"></script>
+		<script src="assets/plugins/jquery.hotkeys.js"></script>
+		<script src="assets/plugins/jquery.slimscroll.js"></script>
+		<script src="assets/plugins/jquery.blockUI.js"></script>		
+		<script src="assets/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/plugins/bootstrapValidator.js"></script>
+		<script src="assets/plugins/vtop-validation.js"></script>
+		<script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+ 		<script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+		
+ 		<script type="text/javascript">
+		
+			window.onload = function() {
+				document.onkeydown = function(e) {
+					return (e.which || e.keyCode) != 116;
+				};
+			    $("body").css("padding-top", $(".navbar-fixed-top").height());
+			}
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+
+		
+			$(window).bind("onunload", function() { 
+				$.blockUI();
+				ajaxCall("/cloneLogout",null,null);
+				$.unblockUI();
+			})
+
+		
+			$(document).bind('keydown', 'alt+right', function(e) {
+				e.preventDefault();
+			});
+
+			$(document).bind('keydown', 'alt+left', function(e) {
+				e.preventDefault();
+			});
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+ 			
+			$(window).on("unload",function() {
+				$.ajax({
+					type : "POST",
+					url : "/cloneLogout",
+					success : function(response){
+					},
+					error : function(jqXHR, textStatus, errorMessage) {
+					}		
+				})
+			}); 
+
+			function doRefreshCaptcha() 
+			{
+	
+				$.ajax({
+					url : "doRefreshCaptcha",									
+					type : "POST",
+					cache : false,
+					processData : false,
+					contentType : false,
+					success : function(response)				
+					{	
+						$("#captchaRefresh").html(response);
+						
+					
+					}
+			 	});
+			}
+			
+		</script>
+			
+			
+		<script>
+		/*<![CDATA[*/
+			
+
+			
+			function resizeDiv() {
+				
+/*  				var winHeight=$( window ).height()-95;
+				$("body").css("height",winHeight+"px");
+				$("#page-content").css("height",winHeight+"px");
+				$("#sidebar-wrapper").css("height",winHeight+"px");*/
+			
+ 		}
+ 
+		   /* $("html").on("contextmenu",function(e){
+		        return false;
+		     });
+
+		     window.oncontextmenu = function () {
+		     return false;
+		     }
+		     $(document).keydown(function (event) {
+		     if (event.keyCode == 123) {
+		     return false;
+		     }
+		     else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+		     return false;
+		     }
+		     }); */
+		 
+			function resetPassword() {
+			  ajaxCall('resetPassword',null,'page_outline');
+			}
+			 
+			function forgotUserID() {
+			  ajaxCall('forgotUserID',null,'page_outline');
+			}			
+
+			function validateOTP() {
+				var data="otp="+$("#otp").val();
+				ajaxCall('validateParentLoginOtp',data,'page_outline');
+			}
+			
+			function openPage()	{
+				ajaxCall("vtopLogin",null,"page_outline");
+			}
+			
+			function openParentPage()	{
+				ajaxCall("vtopParentLogin",null,"page_outline");
+			}
+			
+			function openAlumniPage()	{
+				ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+			}
+			
+
+			
+			
+			/*]]>*/
+		</script>			
+			
+	
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</div><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
